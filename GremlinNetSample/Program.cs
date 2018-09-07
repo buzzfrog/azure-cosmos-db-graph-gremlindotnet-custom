@@ -7,6 +7,7 @@ using Gremlin.Net;
 using Gremlin.Net.Driver;
 using Newtonsoft.Json;
 using Gremlin.Net.Structure.IO.GraphSON;
+using dotenv.net;
 
 namespace GremlinNetSample
 {
@@ -50,7 +51,10 @@ namespace GremlinNetSample
         // Starts a console application that executes every Gremlin query in the gremlinQueries dictionary. 
         static void Main(string[] args)
         {
-            SubmitGremlinRequest()
+            DotEnv.Config();
+            var k = Environment.GetEnvironmentVariable("DB_HOST");
+
+            SubmitGremlinRequest();
 
             // Exit program
             Console.WriteLine("Done. Press any key to exit...");
