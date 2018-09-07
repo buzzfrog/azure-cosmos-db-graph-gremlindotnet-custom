@@ -1,0 +1,4 @@
+﻿HOSTNAME=your-endpoint.gremlin.cosmosdb.azure.com
+AUTHKEY=
+DATABASE=
+COLLECTION=

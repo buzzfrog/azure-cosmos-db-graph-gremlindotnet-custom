@@ -52,7 +52,11 @@ namespace GremlinNetSample
         static void Main(string[] args)
         {
             DotEnv.Config();
-            var k = Environment.GetEnvironmentVariable("DB_HOST");
+            hostname = Environment.GetEnvironmentVariable("HOSTNAME");
+            authKey = Environment.GetEnvironmentVariable("AUTHKEY");
+            database = Environment.GetEnvironmentVariable("DATABASE");
+            collection = Environment.GetEnvironmentVariable("COLLECTION");
+
 
             SubmitGremlinRequest();
 
