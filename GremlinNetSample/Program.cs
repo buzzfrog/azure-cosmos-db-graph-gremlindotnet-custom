@@ -21,6 +21,8 @@ namespace GremlinNetSample
         private static string database = "your-database";
         private static string collection = "your-collection-or-graph";
 
+        private static bool printResult = false;
+
         // Starts a console application that executes every Gremlin query in the gremlinQueries dictionary. 
         static void Main(string[] args)
         {
@@ -31,7 +33,7 @@ namespace GremlinNetSample
             collection = Environment.GetEnvironmentVariable("COLLECTION");
 
             var query = args[0];
-
+            printResult = args.Length > 1 ? Convert.ToBoolean(args[1]) : false;
             SubmitGremlinRequest(query).GetAwaiter().GetResult();
 
             if (System.Diagnostics.Debugger.IsAttached) Console.ReadLine();
@@ -68,11 +70,14 @@ namespace GremlinNetSample
 
                 Console.WriteLine($"Time to execute (incl. transfer) {stopwatch.ElapsedMilliseconds.ToString()} ms");
 
-                foreach (var result in resultSet)
+                if (printResult)
                 {
-                    // The vertex results are formed as Dictionaries with a nested dictionary for their properties.
-                    string output = JsonConvert.SerializeObject(result);
-                    Console.WriteLine(String.Format("\nResult:\n{0}", output));
+                    foreach (var result in resultSet)
+                    {
+                        // The vertex results are formed as Dictionaries with a nested dictionary for their properties.
+                        string output = JsonConvert.SerializeObject(result);
+                        Console.WriteLine(String.Format("\nResult:\n{0}", output));
+                    }
                 }
                 Console.WriteLine();
             }
