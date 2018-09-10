@@ -75,7 +75,7 @@ namespace GremlinNetSample
                     foreach (var result in resultSet)
                     {
                         // The vertex results are formed as Dictionaries with a nested dictionary for their properties.
-                        string output = JsonConvert.SerializeObject(result);
+                        string output = JsonConvert.SerializeObject(result, Formatting.Indented);
                         Console.WriteLine(String.Format("\nResult:\n{0}", output));
                     }
                 }
