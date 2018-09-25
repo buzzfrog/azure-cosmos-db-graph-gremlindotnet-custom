@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GremlinQueryWithStats", "GremlinNetSample\GremlinQueryWithStats.csproj", "{B0854D92-18C5-4008-B3F4-329B46A6F52D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GremlinQueryWithStats", "GremlinQueryWithStats\GremlinQueryWithStats.csproj", "{B0854D92-18C5-4008-B3F4-329B46A6F52D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
