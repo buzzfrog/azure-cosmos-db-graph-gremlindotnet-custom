@@ -10,7 +10,7 @@ using Gremlin.Net.Structure.IO.GraphSON;
 using dotenv.net;
 using System.Diagnostics;
 
-namespace GremlinNetSample
+namespace GremlinQueryWithStats
 {
     class Program
     {
