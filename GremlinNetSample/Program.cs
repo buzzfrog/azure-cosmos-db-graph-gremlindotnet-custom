@@ -15,11 +15,11 @@ namespace GremlinQueryWithStats
     class Program
     {
         // Azure Cosmos DB Configuration variables
-        private static string hostname = "your-endpoint.gremlin.cosmosdb.azure.com";
+        private static string hostname;
         private static int port = 443;
-        private static string authKey = "your-authentication-key";
-        private static string database = "your-database";
-        private static string collection = "your-collection-or-graph";
+        private static string authKey;
+        private static string database;
+        private static string collection;
 
         private static bool printResult = false;
 
